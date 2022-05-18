@@ -17,7 +17,7 @@ namespace RealityFirst.Controllers
 
         private readonly ILogger<ArtistaController> _logger;
 
-        public ArtistaController(Logger<ArtistaController> logger)
+        public ArtistaController(ILogger<ArtistaController> logger)
         {
             _logger = logger;
 
@@ -27,7 +27,7 @@ namespace RealityFirst.Controllers
                     Id = 1,
                     Nombre = "Shakira",
                     Genero = "Pop",
-                    FechaNacimiento = new DateTime(02021977),
+                    FechaNacimiento = new DateTime(19770203),
                     LugarNacimiento = "Barranquilla",
                     PaisNacimiento = "Colombia"
                 },
