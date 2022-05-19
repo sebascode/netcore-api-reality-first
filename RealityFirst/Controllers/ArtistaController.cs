@@ -13,106 +13,104 @@ namespace RealityFirst.Controllers
     [Route("api/[controller]")]
     public class ArtistaController : ControllerBase
     {
-        IList<Model.Artista> list = new List<Model.Artista>();
+        IList<Model.Artista> list = new List<Model.Artista>(){
+                    new Model.Artista
+                    {
+                        Id = 1,
+                        Nombre = "Shakira",
+                        Genero = "Pop",
+                        FechaNacimiento = new DateTime(1977,02,03),
+                        LugarNacimiento = "Barranquilla",
+                        PaisNacimiento = "Colombia"
+                    },
+                    new Model.Artista
+                    {
+                        Id = 2,
+                        Nombre = "Metallica",
+                        Genero = "Rock/Metal",
+                        FechaNacimiento = new DateTime(1983,02,01),
+                        LugarNacimiento = "San Francisco",
+                        PaisNacimiento = "Estados Unidos"
+                    },
+                    new Model.Artista
+                    {
+                        Id = 3,
+                        Nombre = "Bad bunny",
+                        Genero = "Trap/Raggaeton",
+                        FechaNacimiento = new DateTime(1994,03,10),
+                        LugarNacimiento = "Almirante Sur",
+                        PaisNacimiento = "Puerto Rico"
+                    },
+                    new Model.Artista
+                    {
+                        Id = 4,
+                        Nombre = "Residente",
+                        Genero = "Rap/Raggaeton",
+                        FechaNacimiento = new DateTime(1978,02,23),
+                        LugarNacimiento = "Hato Rey Central",
+                        PaisNacimiento = "San Juan/Puerto Rico"
+                    },
+                    new Model.Artista
+                    {
+                        Id = 5,
+                        Nombre = "Lit Killah",
+                        Genero = "Trap/Hip Hop",
+                        FechaNacimiento = new DateTime(1992,10,04),
+                        LugarNacimiento = "Gonzalez Catalán",
+                        PaisNacimiento = "Argentina"
+                    },
+                    new Model.Artista
+                    {
+                        Id = 6,
+                        Nombre = "Tini",
+                        Genero = "Pop",
+                        FechaNacimiento = new DateTime(1997,03,21),
+                        LugarNacimiento = "Buenos Aires",
+                        PaisNacimiento = "Argentina"
+                    },
+                    new Model.Artista
+                    {
+                        Id = 7,
+                        Nombre = "L-Gante",
+                        Genero = "Trap/Cumbia 420",
+                        FechaNacimiento = new DateTime(2000,04,05),
+                        LugarNacimiento = "General Rodriguez",
+                        PaisNacimiento = "Argentina"
+                    },
+                    new Model.Artista
+                    {
+                        Id = 8,
+                        Nombre = "AK4:20",
+                        Genero = "Trap/Rap",
+                        FechaNacimiento = new DateTime(2001,12,19),
+                        LugarNacimiento = "Talca",
+                        PaisNacimiento = "Chile"
+                    },
+                    new Model.Artista
+                    {
+                        Id = 9,
+                        Nombre = "Paililla",
+                        Genero = "Trap/Rap",
+                        FechaNacimiento = new DateTime(2000,12,05),
+                        LugarNacimiento = "Punta Arenas",
+                        PaisNacimiento = "Chile"
+                    },
+                    new Model.Artista
+                    {
+                        Id = 10,
+                        Nombre = "Camiseta 22",
+                        Genero = "Ska/Rock Latino",
+                        FechaNacimiento = new DateTime(2021,08,23),
+                        LugarNacimiento = "Santiago",
+                        PaisNacimiento = "Chile"
+                    }
+                };
 
         private readonly ILogger<ArtistaController> _logger;
 
         public ArtistaController(ILogger<ArtistaController> logger)
         {
             _logger = logger;
-
-            list = new List<Model.Artista> {
-                new Model.Artista
-                {
-                    Id = 1,
-                    Nombre = "Shakira",
-                    Genero = "Pop",
-                    FechaNacimiento = new DateTime(19770203),
-                    LugarNacimiento = "Barranquilla",
-                    PaisNacimiento = "Colombia"
-                },
-                new Model.Artista
-                {
-                    Id = 2,
-                    Nombre = "Metallica",
-                    Genero = "Rock/Metal",
-                    FechaNacimiento = new DateTime(01021983),
-                    LugarNacimiento = "San Francisco",
-                    PaisNacimiento = "Estados Unidos"
-                },
-                new Model.Artista
-                {
-                    Id = 3,
-                    Nombre = "Bad bunny",
-                    Genero = "Trap/Raggaeton",
-                    FechaNacimiento = new DateTime(10031994),
-                    LugarNacimiento = "Almirante Sur",
-                    PaisNacimiento = "Puerto Rico"
-                },
-                new Model.Artista
-                {
-                    Id = 4,
-                    Nombre = "Residente",
-                    Genero = "Rap/Raggaeton",
-                    FechaNacimiento = new DateTime(23021978),
-                    LugarNacimiento = "Hato Rey Central",
-                    PaisNacimiento = "San Juan/Puerto Rico"
-                },
-                new Model.Artista
-                {
-                    Id = 5,
-                    Nombre = "Lit Killah",
-                    Genero = "Trap/Hip Hop",
-                    FechaNacimiento = new DateTime(04101992),
-                    LugarNacimiento = "Gonzalez Catalán",
-                    PaisNacimiento = "Argentina"
-                },
-                new Model.Artista
-                {
-                    Id = 6,
-                    Nombre = "Tini",
-                    Genero = "Pop",
-                    FechaNacimiento = new DateTime(21031997),
-                    LugarNacimiento = "Buenos Aires",
-                    PaisNacimiento = "Argentina"
-                },
-                new Model.Artista
-                {
-                    Id = 7,
-                    Nombre = "L-Gante",
-                    Genero = "Trap/Cumbia 420",
-                    FechaNacimiento = new DateTime(05042000),
-                    LugarNacimiento = "General Rodriguez",
-                    PaisNacimiento = "Argentina"
-                },
-                new Model.Artista
-                {
-                    Id = 8,
-                    Nombre = "AK4:20",
-                    Genero = "Trap/Rap",
-                    FechaNacimiento = new DateTime(19122001),
-                    LugarNacimiento = "Talca",
-                    PaisNacimiento = "Chile"
-                },
-                new Model.Artista
-                {
-                    Id = 9,
-                    Nombre = "Paililla",
-                    Genero = "Trap/Rap",
-                    FechaNacimiento = new DateTime(05112000),
-                    LugarNacimiento = "Punta Arenas",
-                    PaisNacimiento = "Chile"
-                },
-                new Model.Artista
-                {
-                    Id = 10,
-                    Nombre = "Camiseta 22",
-                    Genero = "Ska/Rock Latino",
-                    FechaNacimiento = new DateTime(01011999),
-                    LugarNacimiento = "Santiago",
-                    PaisNacimiento = "Chile"
-                }
-            };
         }
 
         // GET: api/Artista
@@ -124,9 +122,14 @@ namespace RealityFirst.Controllers
 
         // GET: api/Artista/5
         [HttpGet("{id}", Name = "Get")]
-        public Model.Artista Get(int id)
+        public IActionResult Get(int id)
         {
-            return list.FirstOrDefault(x => x.Id == id);
+            Model.Artista artista = list.FirstOrDefault(x => x.Id == id);
+            if (artista == null)
+            {
+                return NotFound();
+            }
+            return Ok(artista);
         }
 
         // POST: api/Artista
@@ -142,7 +145,7 @@ namespace RealityFirst.Controllers
         public void Put(int id, [FromBody] Model.Artista value)
         {
             Model.Artista obj = list.FirstOrDefault(x => x.Id == id);
-            if (obj.Equals(null))
+            if (obj == null)
             {
                 throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound)
                 {
@@ -159,7 +162,7 @@ namespace RealityFirst.Controllers
         public void Delete(int id)
         {
             Model.Artista obj = list.FirstOrDefault(x => x.Id == id);
-            if (obj.Equals(null))
+            if (obj == null)
             {
                 throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound)
                 {
