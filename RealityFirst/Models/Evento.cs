@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using RealityFirst.DBContext;
 
 namespace RealityFirst.Models
 {
@@ -11,13 +12,10 @@ namespace RealityFirst.Models
         public Artista Artista { get; set; }
         public string Donde { get; set; }
         public DateTime Fecha { get; set; }
-        public IList<TipoTicket> Categorias { get; set; }
-        public decimal ValorMax => Categorias.Max(x => x.Valor);
-        public decimal ValorMin => Categorias.Min(x => x.Valor);
+        public TipoEvento TipoEvento { get; set; }
 
         public Evento()
         {
-            this.Categorias = new List<TipoTicket>();
         }
     }
 }
