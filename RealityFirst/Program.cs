@@ -20,8 +20,7 @@ namespace RealityFirst
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>()
-                        .UseUrls("http://0.0.0.0:" + Environment.GetEnvironmentVariable("PORT"));
+                    webBuilder.UseStartup<Startup>();
                 });
     }
 }

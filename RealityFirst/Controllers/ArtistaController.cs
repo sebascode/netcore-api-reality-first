@@ -11,7 +11,7 @@ using RealityFirst.DBContext;
 namespace RealityFirst.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/[controller]")]
     public class ArtistaController : ControllerBase
     {
         IList<Model.Artista> list = DB.getArtistas();
