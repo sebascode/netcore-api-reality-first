@@ -6,7 +6,7 @@ namespace RealityFirst.Models
         public int Id { get; set; }
         public TipoTicket TipoTicket { get; set; }
         public Evento Evento { get; set; }
-        public decimal Valor => TipoEntrada.Valor;
+        public decimal Valor => TipoTicket.Valor;
         public string MedioPago { get; set; }
 
         public Entrada()
