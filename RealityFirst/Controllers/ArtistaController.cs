@@ -14,7 +14,7 @@ namespace RealityFirst.Controllers
     [Route("/[controller]")]
     public class ArtistaController : ControllerBase
     {
-        IList<Model.Artista> list = DB.getArtistas();
+        private readonly IList<Model.Artista> list = DB.getArtistas();
 
         private readonly ILogger<ArtistaController> _logger;
 

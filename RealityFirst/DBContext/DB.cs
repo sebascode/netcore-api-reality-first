@@ -77,7 +77,7 @@ namespace RealityFirst.DBContext
                 Id = 8,
                 Nombre = "AK4:20",
                 Genero = "Trap/Rap",
-                FechaNacimiento = new DateTime(2001,12,19),
+                FechaNacimiento = new DateTime(2001,11,19),
                 LugarNacimiento = "Talca",
                 PaisNacimiento = "Chile"
             },
@@ -86,7 +86,7 @@ namespace RealityFirst.DBContext
                 Id = 9,
                 Nombre = "Pailita",
                 Genero = "Trap/Rap",
-                FechaNacimiento = new DateTime(2000,12,05),
+                FechaNacimiento = new DateTime(2000,11,05),
                 LugarNacimiento = "Punta Arenas",
                 PaisNacimiento = "Chile"
             },
@@ -242,7 +242,7 @@ namespace RealityFirst.DBContext
                 Nombre = "Cumbia 4:20 - Chile Tour - Concepción",
                 Artista = listArtista.FirstOrDefault(x => x.Id == 7),
                 Donde = "Estadio Ester Roa",
-                Fecha = new DateTime(2022, 4, 31),
+                Fecha = new DateTime(2022, 4, 29),
                 TipoEvento = TipoEvento.Estadio
             },
             new Evento
@@ -328,6 +328,17 @@ namespace RealityFirst.DBContext
                 Id = 1,
                 Nombre = "V.I.P.",
                 Valor = 20000
+            }
+        };
+        private static IList<Noticia> listNoticia = new List<Noticia>()
+        {
+            new Noticia
+            {
+                Id = 1,
+                Editor = "Antonelo Mendoza",
+                Escritor = "Marco Aurelio Jonás Do Souza",
+                Evento = listEvento.FirstOrDefault(x => x.Artista.Id == 0),
+                Titulo = ""
             }
         };
 

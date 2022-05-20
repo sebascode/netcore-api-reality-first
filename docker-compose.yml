@@ -1,8 +1,0 @@
-version: '3.4'
-
-services:
-  realityfirst:
-    image: ${DOCKER_REGISTRY-}realityfirst
-    build:
-      context: .
-      dockerfile: RealityFirst/Dockerfile
