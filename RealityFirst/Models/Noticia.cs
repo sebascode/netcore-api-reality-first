@@ -10,6 +10,8 @@ namespace RealityFirst.Models
         public string Escritor { get; set; }
         public string Editor { get; set; }
         public Evento Evento { get; set; }
+        public string NoticiaTexto { get; set; }
+
         private Artista _artista;
         public Artista Artista {
             get {
