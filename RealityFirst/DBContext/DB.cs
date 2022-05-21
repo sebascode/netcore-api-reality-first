@@ -288,30 +288,33 @@ namespace RealityFirst.DBContext
             {
                 Id = 1,
                 Nombre = "Platea Alta",
+                AsientoNumerado = true,
                 Valor = 50000
             },
             new TipoTicket
             {
                 Id = 2,
                 Nombre = "Platea Baja",
+                AsientoNumerado = true,
                 Valor = 40000
             },
             new TipoTicket
             {
-                Id = 1,
+                Id = 3,
                 Nombre = "Cancha",
                 Valor = 35000
             },
             new TipoTicket
             {
-                Id = 1,
+                Id = 4,
                 Nombre = "General",
                 Valor = 15000
             },
             new TipoTicket
             {
-                Id = 1,
+                Id = 5,
                 Nombre = "V.I.P.",
+                AsientoNumerado = true,
                 Valor = 80000
             }
         };
@@ -319,14 +322,15 @@ namespace RealityFirst.DBContext
         {
             new TipoTicket
             {
-                Id = 1,
+                Id = 6,
                 Nombre = "General",
                 Valor = 10000
             },
             new TipoTicket
             {
-                Id = 1,
+                Id = 7,
                 Nombre = "V.I.P.",
+                AsientoNumerado = true,
                 Valor = 20000
             }
         };

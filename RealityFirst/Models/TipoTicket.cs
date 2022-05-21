@@ -7,7 +7,6 @@ namespace RealityFirst.Models
         public string Nombre { get; set; }
         public bool AsientoNumerado { get; set; }
         public decimal Valor { get; set; }
-        public Evento Evento { get; set; }
 
         public TipoTicket()
         {
