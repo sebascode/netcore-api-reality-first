@@ -48,10 +48,18 @@ namespace RealityFirst
             app.UseRouting();
 
             app.UseAuthorization();
-
+            /*
+            //old method 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+            */
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action}/{id?}");
             });
         }
     }

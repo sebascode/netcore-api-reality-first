@@ -13,9 +13,11 @@ namespace RealityFirst.Models
         public string Donde { get; set; }
         public DateTime Fecha { get; set; }
         public TipoEvento TipoEvento { get; set; }
+        public string TipoEventoStr => TipoEvento.ToString();
 
         public Evento()
         {
+            TipoEvento = TipoEvento.Otro;
         }
     }
 }

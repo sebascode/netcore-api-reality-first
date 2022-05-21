@@ -8,7 +8,7 @@ using RealityFirst.DBContext;
 namespace RealityFirst.Controllers
 {
     [ApiController]
-    [Route("/[controller]")]
+    [Route("api/[controller]")]
     public class ArtistaController : ControllerBase
     {
         private readonly IList<Model.Artista> list = DB.getArtistas();
@@ -28,7 +28,7 @@ namespace RealityFirst.Controllers
         }
 
         // GET: api/Artista/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetArtista")]
         public IActionResult Get(int id)
         {
             Model.Artista artista = list.FirstOrDefault(x => x.Id == id);
